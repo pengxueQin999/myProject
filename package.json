@@ -68,20 +68,19 @@
   },
   "babel": {
     "plugins": [
-    [
-    "@babel/plugin-proposal-decorators",
-    {
-    "legacy": true
-    }
-    ],
-    "transform-class-properties"
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      "transform-class-properties"
     ],
     "presets": [
-    "react-app",
-    "@babel/preset-env"
+      "react-app",
+      "@babel/preset-env"
     ]
-    },
-    
+  },
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
