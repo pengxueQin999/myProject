@@ -40,3 +40,9 @@
   color:white !important;
   margin-bottom:50px
 }
+.ant-input-affix-wrapper{
+  margin-right: 30% !important;
+}
+.ant-form-item-control-input-content{
+  margin-right: 55% !important;
+}

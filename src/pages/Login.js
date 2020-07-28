@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Layout } from 'antd';
 
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button } from 'antd';
 
 const { Header, Footer, Content } = Layout;
 
@@ -48,10 +48,6 @@ class Logins extends Component {
                         <Input.Password />
                     </Form.Item>
 
-                    <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-                        <Checkbox>Remember me</Checkbox>
-                    </Form.Item>
-
                     <Form.Item {...tailLayout}>
                         <Button type="primary" htmlType="submit">
                         登录
@@ -64,5 +60,4 @@ class Logins extends Component {
          );
     }
 }
- 
 export default Logins;
