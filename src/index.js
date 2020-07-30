@@ -7,8 +7,16 @@ import * as serviceWorker from './serviceWorker';
 // 导入antd样式
 import "antd/dist/antd.css" 
 
+// 引入store
+import store from './store'
+
+//mobx-react
+import {Provider} from 'mobx-react'
+
 ReactDOM.render(
-    <App />,
+  <Provider {...store}>
+      <App />
+  </Provider>,
   document.getElementById('root')
 );
 

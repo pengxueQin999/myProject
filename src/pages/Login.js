@@ -3,8 +3,15 @@ import { Layout } from 'antd';
 
 import { Form, Input, Button } from 'antd';
 
+import {inject,observer}from "mobx-react"
+
+
+
 const { Header, Footer, Content } = Layout;
 
+@inject('user')
+
+@observer
 class Logins extends Component {
     render() { 
         const layout = {
@@ -16,6 +23,14 @@ class Logins extends Component {
           };
           const onFinish = values => {
             console.log('Success:', values);
+            this.props.user.login()
+            .then(data=>{
+                console.log(data);
+                this.props.history.push("/index")
+            })
+            .catch(err=>{
+                console.log(err);
+            })
           };
         
           const onFinishFailed = errorInfo => {
